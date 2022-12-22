@@ -3,6 +3,8 @@ const express = require('express');
 const PORT = process.env.PORT || 8080;
 const app = express();
 
+app.use(express.static('public'));
+
 // Routes
 app.get('/tarea1', (req, res) => {
   res.send('<h1>Tarea 1</h1>');
